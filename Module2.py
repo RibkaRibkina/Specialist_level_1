@@ -2,7 +2,6 @@
 #
 r = range(10)
 
-
 # print(r)
 # type(r)
 # for i in range(1, 11):
@@ -91,12 +90,24 @@ r = range(10)
 # print(sec)
 
 
-def area_of_disk(radius):
-    return 3.14 * radius ** 2
+# def area_of_disk(radius):
+#     return 3.14 * radius ** 2
+#
+#
+# # rad = area_of_disk(2)
+# # print(rad)
+#
+# def area_of_ring(outer, inner):
+#     return area_of_disk(outer) - area_of_disk(inner)
 
-# rad = area_of_disk(2)
-# print(rad)
-
-def area_of_ring(outer, inner):
-    return area_of_disk(outer) - area_of_disk(inner)
-
+# def area_of_disk(radius):
+#     '''
+#     Help on function:
+#
+#
+#     :param radius
+#     :return
+#     '''
+#     return 3.14 * radius ** 2
+#
+# print()
