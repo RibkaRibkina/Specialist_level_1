@@ -18,6 +18,7 @@ def comparison(x, y):
         y > x
         return x
 
+
 number_x = int(input("Введите число: "))
 number_y = int(input("Введите число: "))
 print(comparison(number_x, number_y))

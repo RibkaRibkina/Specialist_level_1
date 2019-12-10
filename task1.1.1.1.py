@@ -20,5 +20,6 @@ def even_odd(number):
     else:
         print("нечет")
 
+
 number = int(input("Введите число:"))
 even_odd(number)
