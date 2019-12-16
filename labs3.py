@@ -1,3 +1,4 @@
+# Работа с файлами и текстом
 def read_file(file):
     """
     file -> list
@@ -16,4 +17,24 @@ def read_file(file):
 
 
 words = read_file("data.txt")
-print(words)
+
+
+def save_file(file, wprds):
+    """"
+    file, list -> file
+
+    The function records the number of
+    all unique words in a file and the word
+    list itself in alphabetical order.
+    """
+
+    total_word = len(words)
+    with open(file, "a", encoding="utf-8") as file:
+        file.write(f"\nВсего уникальных слов: {total_word}")
+        file.write(f"\n=====================")
+        words.sort()
+        for i in words:
+            file.write(f"\n {i}")
+
+
+save_file("data.txt", words)
