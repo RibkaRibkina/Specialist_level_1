@@ -34,7 +34,7 @@ def save_file(file, wprds):
         file.write(f"\n=====================")
         words.sort()
         for i in words:
-            file.write(f"\n {i}")
+            file.write(f"\n{i}")
 
 
 save_file("data.txt", words)
