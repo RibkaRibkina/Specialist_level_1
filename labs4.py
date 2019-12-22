@@ -1,3 +1,4 @@
+# Обработка ошибок при работе с файлом
 try:
     file_name = input("Введите имя фаила: ")
     file = open(file_name + ".txt", "r", encoding="utf-8")
