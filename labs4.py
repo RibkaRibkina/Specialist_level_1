@@ -1,38 +1,29 @@
-# def work_with_files(file_name):
-#     with open(file_name, "r", encoding="utf-8") as file:
-#         list_file = file.read()
-#         list_file = list_file.replace(",", "").replace(".", "") \
-#             .replace(":", "").split("\n")
-#         unique_value = list(list_file)
-#         return unique_value
-
-
-# def work_with_files(file_name):
-#     file = open(file_name, "r", encoding="utf-8")
-#
-#
-#     file.close()
-#     return unique_value
-
-
-
-
-
 try:
     file_name = input("Введите имя фаила: ")
-    file = open(file_name, "r", encoding="utf-8")
-    try:
-        print(file.readlines())
-    except NameError:
-        print("Всвязи с неверно веденым форматом фаила\nвывести список значений невозможно! ")
-except FileNotFoundError:
-    print("Не верный фогрмат файла!!!\nПопробуите еще раз!")
-finally:
+    file = open(file_name + ".txt", "r", encoding="utf-8")
+    list_file = []
+    for line in file:
+        list_file.append(line.strip())
+    print(f"{list_file.pop(0)} цифры в файле")
+    print(list_file)
     file.close()
-    print("Файл закрыт!!!")
+    print("Файл закрыт!")
+except FileNotFoundError:
+    print("Вы ввели несуществующее имя файла!")
+except ValueError:
+    print('Это не число. Выходим.')
+finally:
+    print("Досвидания!")
 
 
 
-# print(work_with_files("digit.txt"))
 
-
+# file_name = input("Введите имя фаила: ")
+# file = open(file_name, "r", encoding="utf-8")
+# list_file = []
+# for i in file:
+#     list_file.append(i.strip())
+# list_file.pop(0)
+# print(list_file)
+# file.close()
+# print("Файл закрыт!")
